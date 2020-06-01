@@ -1,0 +1,15 @@
+<!-- wxml是用来编写页面骨架的文件 -->
+<!-- <div> 容器 分隔文档 -->
+<!-- <view></view> 大多数情况下都是拿来做容器的 -->
+<!-- image可以显示一张图片 -->
+<!-- text可以显示文本标签，它还有一些额外的属性值 -->
+<!-- 尽量不用button 可以用view加text代替 -->
+<!-- 微信小程序图片的默认样式是width:300px height:225px -->
+<!-- 如果要有响应式的px值就前面要加个r,就是200px写成200rpx -->
+<view class="container">
+  <image class="user-avatar" src="/images/1.jpg"></image>
+  <text class="user-avatar">Hello Birches</text>
+  <view class="moto-container" bind:tap="onTap">
+    <text class="moto">开启小程序之旅</text>
+  </view>
+</view>

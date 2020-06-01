@@ -1,0 +1,20 @@
+<!-- swiper的高宽取决于swiper-item ,设置轮播图高度和宽度就要把属性值写在swiper上面-->
+<import src="post-item/post-item-template.wxml"></import>
+<view>
+  <swiper catch:tap="onSwiperTap" vertical="{{false}}" indicator-dots="{{true}}" autoplay="{{true}}">
+    <swiper-item>
+      <image src="/images/wx.png" data-postId="3"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/vr.png" data-postId="4"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/iqiyi.png" data-postId="5"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{post_key}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <view catch:tap="onPostTap" data-postId="{{item.postId}}">
+    <template is="postItem" data="{{...item}}"></template>
+    </view>
+  </block>
+</view>
